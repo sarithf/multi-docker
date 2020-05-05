@@ -17,9 +17,9 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
   # take images and push them to docker hub
-  - docker push sarithf/multi-container:sarithf/multi-client
-  - docker push sarithf/multi-container:sarithf/multi-nginx
-  - docker push sarithf/multi-container:sarithf/multi-server
-  - docker push sarithf/multi-container:sarithf/multi-worker
+  - docker push sarithf/multi-client
+  - docker push sarithf/multi-nginx
+  - docker push multi-server
+  - docker push multi-worker
 
 
