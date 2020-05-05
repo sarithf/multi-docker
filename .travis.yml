@@ -9,10 +9,10 @@ script:
   - docker run -e CI=true sarithf/react-test npm test
 
 after_success:
-  - docker build-t sarithf/multi-client ./client
-  - docker build-t sarithf/multi-nginx ./nginx
-  - docker build-t sarithf/multi-server ./server
-  - docker build-t sarithf/multi-worker ./worker
+  - docker build -t sarithf/multi-client ./client
+  - docker build -t sarithf/multi-nginx ./nginx
+  - docker build -t sarithf/multi-server ./server
+  - docker build -t sarithf/multi-worker ./worker
   #login to docker hub CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
